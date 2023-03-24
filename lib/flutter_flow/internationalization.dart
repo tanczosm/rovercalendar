@@ -12,7 +12,7 @@ class FFLocalizations {
   static FFLocalizations of(BuildContext context) =>
       Localizations.of<FFLocalizations>(context, FFLocalizations)!;
 
-  static List<String> languages() => ['en', 'es'];
+  static List<String> languages() => ['en'];
 
   static late SharedPreferences _prefs;
   static Future initialize() async =>
@@ -38,9 +38,8 @@ class FFLocalizations {
 
   String getVariableText({
     String? enText = '',
-    String? esText = '',
   }) =>
-      [enText, esText][languageIndex] ?? '';
+      [enText][languageIndex] ?? '';
 
   static const Set<String> _languagesWithShortCode = {
     'ar',
@@ -104,69 +103,5 @@ Locale createLocale(String language) => language.contains('_')
       )
     : Locale(language);
 
-final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // HomePage
-  {
-    'ywzp11ty': {
-      'en': 'Page Title',
-      'es': '',
-    },
-    '17gkisys': {
-      'en': 'Home',
-      'es': '',
-    },
-  },
-  // EventList
-  {
-    'px4xz5rh': {
-      'en': 'Events',
-      'es': '',
-    },
-    '89938v1p': {
-      'en': 'Upcoming events from the groups you follow.',
-      'es': '',
-    },
-    '89bud7w5': {
-      'en': 'Athletics',
-      'es': '',
-    },
-    '4dibv8rq': {
-      'en':
-          'Task Description here this one is really long and it goes over maybe? And goes to two lines.',
-      'es': '',
-    },
-    'hmcbi2yi': {
-      'en': 'Due',
-      'es': '',
-    },
-    '892oc98g': {
-      'en': 'Today, 5:30pm',
-      'es': '',
-    },
-    'bhf1fxm4': {
-      'en': 'Task Type',
-      'es': '',
-    },
-    'kh70cagx': {
-      'en':
-          'Task Description here this one is really long and it goes over maybe? And goes to two lines.',
-      'es': '',
-    },
-    'ihsznmlc': {
-      'en': 'Due',
-      'es': '',
-    },
-    'pjojkhl7': {
-      'en': 'Today, 5:30pm',
-      'es': '',
-    },
-    '7t6rmpzu': {
-      'en': 'Page Title',
-      'es': '',
-    },
-    'q2lurmhw': {
-      'en': 'Home',
-      'es': '',
-    },
-  },
-].reduce((a, b) => a..addAll(b));
+final kTranslationsMap =
+    <Map<String, Map<String, String>>>[].reduce((a, b) => a..addAll(b));

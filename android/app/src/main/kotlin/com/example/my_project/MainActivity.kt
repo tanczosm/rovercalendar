@@ -1,4 +1,4 @@
-package com.mycompany.calendartest
+package com.mycompany.rovercalendar
 
 import io.flutter.embedding.android.FlutterActivity
 

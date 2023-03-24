@@ -1,4 +1,3 @@
-import '/flutter_flow/flutter_flow_calendar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -43,9 +42,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryColor,
         automaticallyImplyLeading: false,
         title: Text(
-          FFLocalizations.of(context).getText(
-            'ywzp11ty' /* Page Title */,
-          ),
+          'Page Title',
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
                 color: Colors.white,
@@ -61,22 +58,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [
-              FlutterFlowCalendar(
-                color: FlutterFlowTheme.of(context).primaryColor,
-                weekFormat: false,
-                weekStartsMonday: false,
-                onChange: (DateTimeRange? newSelectedDate) {
-                  setState(() => _model.calendarSelectedDay = newSelectedDate);
-                },
-                titleStyle: TextStyle(),
-                dayOfWeekStyle: TextStyle(),
-                dateStyle: TextStyle(),
-                selectedDateStyle: TextStyle(),
-                inactiveDateStyle: TextStyle(),
-                locale: FFLocalizations.of(context).languageCode,
-              ),
-            ],
+            children: [],
           ),
         ),
       ),
