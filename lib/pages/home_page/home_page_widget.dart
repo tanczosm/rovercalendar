@@ -1,5 +1,7 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/custom_code/widgets/index.dart' as custom_widgets;
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -58,7 +60,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
           onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
           child: Column(
             mainAxisSize: MainAxisSize.max,
-            children: [],
+            children: [
+              Container(
+                width: MediaQuery.of(context).size.width * 1.0,
+                height: 250.0,
+                child: custom_widgets.RoverCalendar(
+                  width: MediaQuery.of(context).size.width * 1.0,
+                  height: 250.0,
+                  color: Color(0xFFAC3E3E),
+                  weekFormat: true,
+                  weekStartsMonday: false,
+                  iconColor: Colors.black,
+                  rowHeight: 50.0,
+                  locale: 'en',
+                  initialDate: functions.getDateTimeNow(),
+                  onChange: () async {},
+                ),
+              ),
+            ],
           ),
         ),
       ),
