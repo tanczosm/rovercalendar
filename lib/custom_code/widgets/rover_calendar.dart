@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 
 import 'index.dart'; // Imports other custom widgets
 
+import 'index.dart'; // Imports other custom widgets
+
 import 'package:flutter/scheduler.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -40,7 +42,7 @@ class RoverCalendar extends StatefulWidget {
   const RoverCalendar({
     Key? key,
     required this.color,
-    this.onChange,
+    required this.onChange,
     this.initialDate,
     this.weekFormat = false,
     this.weekStartsMonday = false,
@@ -54,7 +56,7 @@ class RoverCalendar extends StatefulWidget {
   final bool weekFormat;
   final bool weekStartsMonday;
   final Color color;
-  final void Function(DateTimeRange?)? onChange;
+  final Future<dynamic> Function() onChange;
   final DateTime? initialDate;
   final Color? iconColor;
   final double? rowHeight;
@@ -116,7 +118,8 @@ class _RoverCalendarState extends State<RoverCalendar> {
       selectedDay = newSelectedDay ?? selectedDay;
       selectedRange = newRange ?? selectedRange;
       if (widget.onChange != null) {
-        widget.onChange!(newRange);
+        // todo: assign newRange to FFState variable
+        widget.onChange();
       }
     });
   }

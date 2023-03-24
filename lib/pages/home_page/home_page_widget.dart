@@ -74,7 +74,23 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   rowHeight: 50.0,
                   locale: 'en',
                   initialDate: functions.getDateTimeNow(),
-                  onChange: () async {},
+                  onChange: () async {
+                    await showDialog(
+                      context: context,
+                      builder: (alertDialogContext) {
+                        return AlertDialog(
+                          content: Text('Hi'),
+                          actions: [
+                            TextButton(
+                              onPressed: () =>
+                                  Navigator.pop(alertDialogContext),
+                              child: Text('Ok'),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+                  },
                 ),
               ),
             ],
