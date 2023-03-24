@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "609304627305",
+    "project_id": "calendartest-aefe8",
+    "storage_bucket": "calendartest-aefe8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:609304627305:android:d701ad03a888600586faf8",
+        "android_client_info": {
+          "package_name": "com.mycompany.calendartest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "609304627305-1hgf1pb9279nvhs8o4s2d91k1rm0uivo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.calendartest",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "609304627305-i0lf2hjrmjdms91lefsjff64pb3k9cee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcwfnJCSub4qL8bbV6ZBXoolJMPFPlhHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "609304627305-i0lf2hjrmjdms91lefsjff64pb3k9cee.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "609304627305-8dc15u8j26km35a4ie9gil7caasn65mp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mycompany.calendartest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
