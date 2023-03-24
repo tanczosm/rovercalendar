@@ -118,53 +118,53 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // EventList
   {
-    'x6xgfglx': {
+    'px4xz5rh': {
       'en': 'Events',
       'es': '',
     },
-    'sg0n9ec4': {
+    '89938v1p': {
       'en': 'Upcoming events from the groups you follow.',
       'es': '',
     },
-    'm7bfeuf8': {
+    '89bud7w5': {
       'en': 'Athletics',
       'es': '',
     },
-    'l6szdyen': {
+    '4dibv8rq': {
       'en':
           'Task Description here this one is really long and it goes over maybe? And goes to two lines.',
       'es': '',
     },
-    'd1q6rzo4': {
+    'hmcbi2yi': {
       'en': 'Due',
       'es': '',
     },
-    'if8lw8cq': {
+    '892oc98g': {
       'en': 'Today, 5:30pm',
       'es': '',
     },
-    '9fhqyeuo': {
+    'bhf1fxm4': {
       'en': 'Task Type',
       'es': '',
     },
-    'ab8llgfw': {
+    'kh70cagx': {
       'en':
           'Task Description here this one is really long and it goes over maybe? And goes to two lines.',
       'es': '',
     },
-    'x3ddntsu': {
+    'ihsznmlc': {
       'en': 'Due',
       'es': '',
     },
-    'noz70g2w': {
+    'pjojkhl7': {
       'en': 'Today, 5:30pm',
       'es': '',
     },
-    'gunauo5k': {
+    '7t6rmpzu': {
       'en': 'Page Title',
       'es': '',
     },
-    '0qwb30s9': {
+    'q2lurmhw': {
       'en': 'Home',
       'es': '',
     },

@@ -78,7 +78,7 @@ class _EventListWidgetState extends State<EventListWidget>
         automaticallyImplyLeading: false,
         title: Text(
           FFLocalizations.of(context).getText(
-            'gunauo5k' /* Page Title */,
+            '7t6rmpzu' /* Page Title */,
           ),
           style: FlutterFlowTheme.of(context).title2.override(
                 fontFamily: 'Poppins',
@@ -124,7 +124,7 @@ class _EventListWidgetState extends State<EventListWidget>
                               16.0, 12.0, 0.0, 4.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'x6xgfglx' /* Events */,
+                              'px4xz5rh' /* Events */,
                             ),
                             style: FlutterFlowTheme.of(context).title2.override(
                                   fontFamily: 'Outfit',
@@ -139,7 +139,7 @@ class _EventListWidgetState extends State<EventListWidget>
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
-                              'sg0n9ec4' /* Upcoming events from the group... */,
+                              '89938v1p' /* Upcoming events from the group... */,
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyText2.override(
@@ -232,7 +232,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      'm7bfeuf8' /* Athletics */,
+                                                      '89bud7w5' /* Athletics */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -250,7 +250,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'l6szdyen' /* Task Description here this one... */,
+                                                    '4dibv8rq' /* Task Description here this one... */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -284,7 +284,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'd1q6rzo4' /* Due */,
+                                                            'hmcbi2yi' /* Due */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -306,7 +306,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'if8lw8cq' /* Today, 5:30pm */,
+                                                            '892oc98g' /* Today, 5:30pm */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -388,7 +388,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                      '9fhqyeuo' /* Task Type */,
+                                                      'bhf1fxm4' /* Task Type */,
                                                     ),
                                                     style: FlutterFlowTheme.of(
                                                             context)
@@ -406,7 +406,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                 Text(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                    'ab8llgfw' /* Task Description here this one... */,
+                                                    'kh70cagx' /* Task Description here this one... */,
                                                   ),
                                                   style: FlutterFlowTheme.of(
                                                           context)
@@ -440,7 +440,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'x3ddntsu' /* Due */,
+                                                            'ihsznmlc' /* Due */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
@@ -462,7 +462,7 @@ class _EventListWidgetState extends State<EventListWidget>
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'noz70g2w' /* Today, 5:30pm */,
+                                                            'pjojkhl7' /* Today, 5:30pm */,
                                                           ),
                                                           style: FlutterFlowTheme
                                                                   .of(context)
