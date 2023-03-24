@@ -71,6 +71,7 @@ class RoverCalendar extends StatefulWidget {
 class _RoverCalendarState extends State<RoverCalendar> {
   late DateTime focusedDay;
   late DateTime selectedDay;
+  late bool weekFormat;
   late DateTimeRange selectedRange;
   late TextStyle? dateStyle;
   late TextStyle? dayOfWeekStyle;
@@ -81,6 +82,7 @@ class _RoverCalendarState extends State<RoverCalendar> {
   @override
   void initState() {
     super.initState();
+    weekFormat = widget.weekFormat;
     focusedDay = widget.initialDate ?? DateTime.now();
     selectedDay = widget.initialDate ?? DateTime.now();
     selectedRange = DateTimeRange(
@@ -92,9 +94,9 @@ class _RoverCalendarState extends State<RoverCalendar> {
   }
 
   CalendarFormat get calendarFormat =>
-      widget.weekFormat ? CalendarFormat.week : CalendarFormat.month;
+      weekFormat ? CalendarFormat.week : CalendarFormat.month;
 
-  StartingDayOfWeek get startingDayOfWeek => widget.weekStartsMonday
+   StartingDayOfWeek get startingDayOfWeek => widget.weekStartsMonday
       ? StartingDayOfWeek.monday
       : StartingDayOfWeek.sunday;
 
@@ -124,6 +126,10 @@ class _RoverCalendarState extends State<RoverCalendar> {
     });
   }
 
+  void toggleFormat() {
+    weekFormat = !weekFormat;
+  }
+
   @override
   Widget build(BuildContext context) {
     dateStyle = FlutterFlowTheme.of(context).bodyText1;
@@ -139,6 +145,7 @@ class _RoverCalendarState extends State<RoverCalendar> {
       children: <Widget>[
         CalendarHeader(
           focusedDay: focusedDay,
+          onMonthTap: () => setState( toggleFormat ),
           onLeftChevronTap: () => setState(
             () => focusedDay = widget.weekFormat
                 ? _previousWeek(focusedDay)
@@ -219,6 +226,7 @@ class CalendarHeader extends StatelessWidget {
   const CalendarHeader({
     Key? key,
     required this.focusedDay,
+    required this.onMonthTap,
     required this.onLeftChevronTap,
     required this.onRightChevronTap,
     required this.onTodayButtonTap,
@@ -228,6 +236,7 @@ class CalendarHeader extends StatelessWidget {
   }) : super(key: key);
 
   final DateTime focusedDay;
+  final VoidCallback onMonthTap;
   final VoidCallback onLeftChevronTap;
   final VoidCallback onRightChevronTap;
   final VoidCallback onTodayButtonTap;
@@ -247,10 +256,13 @@ class CalendarHeader extends StatelessWidget {
               width: 20,
             ),
             Expanded(
-              child: Text(
-                DateFormat.yMMMM(locale).format(focusedDay),
-                style: const TextStyle(fontSize: 17).merge(titleStyle),
-              ),
+              child: InkWell(
+                  child: Text(
+                  DateFormat.yMMMM(locale).format(focusedDay),
+                  style: const TextStyle(fontSize: 17).merge(titleStyle),
+                  ),
+                  onTap: onMonthTap
+                ),
             ),
             CustomIconButton(
               icon: Icon(Icons.calendar_today, color: iconColor),

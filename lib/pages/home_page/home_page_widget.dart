@@ -62,8 +62,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: MediaQuery.of(context).size.width * 1.0,
-                height: 250.0,
                 child: custom_widgets.RoverCalendar(
                   width: MediaQuery.of(context).size.width * 1.0,
                   height: 250.0,
@@ -71,7 +69,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   weekFormat: true,
                   weekStartsMonday: false,
                   iconColor: Colors.black,
-                  rowHeight: 50.0,
+                  rowHeight: 80.0,
                   locale: 'en',
                   initialDate: functions.getDateTimeNow(),
                   onChange: () async {
