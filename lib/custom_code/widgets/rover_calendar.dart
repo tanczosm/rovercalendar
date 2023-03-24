@@ -2,9 +2,12 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom widgets
+import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
+
+import 'index.dart'; // Imports other custom widgets
 
 import 'package:flutter/scheduler.dart';
 import 'package:intl/intl.dart';
@@ -144,7 +147,7 @@ class _RoverCalendarState extends State<RoverCalendar> {
                 : _nextMonth(focusedDay),
           ),
           onTodayButtonTap: () => setState(() => focusedDay = DateTime.now()),
-          titleStyle: widget.titleStyle,
+          titleStyle: titleStyle,
           iconColor: widget.iconColor,
           locale: widget.locale,
         ),
@@ -159,19 +162,19 @@ class _RoverCalendarState extends State<RoverCalendar> {
           rowHeight: widget.rowHeight ?? MediaQuery.of(context).size.width / 7,
           calendarStyle: CalendarStyle(
             defaultTextStyle:
-                widget.dateStyle ?? const TextStyle(color: Color(0xFF5A5A5A)),
-            weekendTextStyle: widget.dateStyle ??
-                const TextStyle(color: const Color(0xFF5A5A5A)),
-            holidayTextStyle: widget.dateStyle ??
-                const TextStyle(color: const Color(0xFF5C6BC0)),
+                dateStyle ?? const TextStyle(color: Color(0xFF5A5A5A)),
+            weekendTextStyle:
+                dateStyle ?? const TextStyle(color: const Color(0xFF5A5A5A)),
+            holidayTextStyle:
+                dateStyle ?? const TextStyle(color: const Color(0xFF5C6BC0)),
             selectedTextStyle:
                 const TextStyle(color: Color(0xFFFAFAFA), fontSize: 16.0)
-                    .merge(widget.selectedDateStyle),
+                    .merge(selectedDateStyle),
             todayTextStyle:
                 const TextStyle(color: Color(0xFFFAFAFA), fontSize: 16.0)
-                    .merge(widget.selectedDateStyle),
+                    .merge(selectedDateStyle),
             outsideTextStyle: const TextStyle(color: Color(0xFF9E9E9E))
-                .merge(widget.inactiveDateStyle),
+                .merge(inactiveDateStyle),
             selectedDecoration: BoxDecoration(
               color: color,
               shape: BoxShape.circle,
@@ -190,10 +193,10 @@ class _RoverCalendarState extends State<RoverCalendar> {
           availableGestures: AvailableGestures.horizontalSwipe,
           startingDayOfWeek: startingDayOfWeek,
           daysOfWeekStyle: DaysOfWeekStyle(
-            weekdayStyle: const TextStyle(color: Color(0xFF616161))
-                .merge(widget.dayOfWeekStyle),
-            weekendStyle: const TextStyle(color: Color(0xFF616161))
-                .merge(widget.dayOfWeekStyle),
+            weekdayStyle:
+                const TextStyle(color: Color(0xFF616161)).merge(dayOfWeekStyle),
+            weekendStyle:
+                const TextStyle(color: Color(0xFF616161)).merge(dayOfWeekStyle),
           ),
           onDaySelected: (newSelectedDay, _) {
             if (!isSameDay(selectedDay, newSelectedDay)) {
